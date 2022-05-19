@@ -1,0 +1,43 @@
+#include <stdio.h>
+#define NUMS 3
+
+int main(void)
+ {
+     printf(">-----------------Temperature Analyzer -------------------<\n");
+    int highTemp;
+    int lowTemp;
+    int i;
+    for (i=1; i < NUMS + 1; ++i)
+    {
+        printf("Enter the high value for %d : ", i);
+        scanf("%d", &highTemp);
+        printf("Enter the low value for %d : ", i);
+        scanf("%d", &lowTemp);
+        
+        if (highTemp < lowTemp) { while((highTemp < lowTemp) || (highTemp > 40) || (lowTemp < -40)){
+            printf("Incorrect values, temperatures must be in the range -40 to 40, high must be greater than low.\n");
+            printf("Enter the high value for %d : ", i);
+            scanf("%d", &highTemp);
+            printf("Enter the low value for %d : ", i);
+            scanf("%d", &lowTemp);}
+        }
+        else if (highTemp > 40){ while ((highTemp < lowTemp) || (highTemp > 40) || (lowTemp < -40)){
+            printf("Incorrect values, temperatures must be in the range -40 to 40, high must be greater than low.\n");
+            printf("Enter the high value for %d : ", i);
+            scanf("%d", &highTemp);
+            printf("Enter the low value for %d : ", i);
+            scanf("%d", &lowTemp);}
+        }
+        
+        else if (lowTemp < -40){ while ((highTemp < lowTemp) || (highTemp > 40) || (lowTemp < -40)){
+            printf("Incorrect values, temperatures must be in the range -40 to 40, high must be greater than low.\n");
+            printf("Enter the high value for %d : ", i);
+            scanf("%d", &highTemp);
+            printf("Enter the low value for %d : ", i);
+            scanf("%d", &lowTemp);}
+        }
+    }
+     return 0;
+
+
+ }
